@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FLIGHT — Sell the empty leg. Stop burning money in the sky.</title>
+<meta name="description" content="Every private jet in India flies empty on the way to pick you up. FLIGHT turns those empty legs into seats people can book — extra revenue for operators and pilots, 60–80% savings for travellers." />
+<meta name="theme-color" content="#070d16" />
+<meta property="og:title" content="FLIGHT — Sell the empty leg" />
+<meta property="og:description" content="Private jets fly empty 30–40% of the time. We fix that. A seat-sharing marketplace for repositioning flights." />
+<meta property="og:image" content="assets/hero-jet.jpg" />
+<link rel="preload" as="image" href="assets/hero-jet.jpg" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23070d16'/%3E%3Cpath d='M6 20l20-9-5 10-5-1z' fill='%23f2b544'/%3E%3C/svg%3E" />
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="#top" aria-label="FLIGHT home">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M3 21.5 29 8.5 21.5 25l-7.4-3.2L11 27l-1.4-6.6L3 21.5Z" fill="currentColor"/>
+      </svg>
+      <span class="brand__word">FLIGHT<span class="brand__dot">.</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#problem">The problem</a>
+      <a href="#how">How it works</a>
+      <a href="#board">Empty-leg board</a>
+      <a href="#earnings">Earnings</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--sm" href="#board">Browse legs</a>
+      <a class="btn btn--gold btn--sm" href="#waitlist">Get early access</a>
+    </div>
+    <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="nav__mobile" id="mobileMenu" hidden>
+    <a href="#problem">The problem</a>
+    <a href="#how">How it works</a>
+    <a href="#board">Empty-leg board</a>
+    <a href="#earnings">Earnings calculator</a>
+    <a href="#pricing">Pricing</a>
+    <a class="btn btn--gold" href="#waitlist">Get early access</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="hero__bg" role="img" aria-label="A private jet waiting on a wet apron at dusk"></div>
+  <div class="hero__veil"></div>
+  <div class="wrap hero__inner">
+    <p class="eyebrow eyebrow--light"><span class="pulse"></span> India's empty-leg marketplace · launching 2026</p>
+    <h1 class="hero__title">
+      Private jets fly <span class="strike">empty</span><br />
+      <span class="hero__accent">on your dime.</span>
+    </h1>
+    <p class="hero__sub">
+      To pick you up, an aircraft often has to fly to you with nobody on board.
+      That's fuel, crew and hours burned for ₹0 revenue — and it happens on
+      <strong>3–4 of every 10 private flights</strong>. FLIGHT sells that empty leg as seats,
+      so operators earn on the way <em>in</em>, and travellers fly private for up to 80% less.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--gold btn--lg" href="#board">Find an empty leg</a>
+      <a class="btn btn--line btn--lg" href="#earnings">See what a pilot earns →</a>
+    </div>
+    <ul class="hero__proof">
+      <li><strong>30–40%</strong><span>of charter legs fly empty</span></li>
+      <li><strong>₹18–45k</strong><span>wasted per empty hour</span></li>
+      <li><strong>0</strong><span>real marketplaces in India today</span></li>
+    </ul>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"><span></span>scroll</div>
+</section>
+
+<!-- ===================== PROBLEM ===================== -->
+<section class="section" id="problem">
+  <div class="wrap">
+    <div class="grid grid--2 grid--top">
+      <div class="reveal">
+        <p class="eyebrow">The ₹1,000-crore leak</p>
+        <h2 class="h2">A jet that takes off empty<br />is a <span class="hl">flying loss</span>.</h2>
+        <p class="lede">
+          Aviation runs on <em>positioning</em>: the aircraft has to be where the passenger is.
+          The return trip, the ferry leg to a maintenance base, the aircraft going home after
+          dropping a family in Goa — all of it flies with empty seats and a full fuel bill.
+        </p>
+        <p class="body">
+          Operators absorb it and price it into the charter. Pilots and crew see the waste every week
+          and have zero tools to recover a rupee of it. Travellers never even learn the seat existed.
+          Everyone loses; only the fuel bill wins.
+        </p>
+        <a class="link-arrow" href="#how">Here's how we close the loop <span>→</span></a>
+      </div>
+
+      <div class="loss-card reveal" aria-label="Cost of an empty leg, illustrated">
+        <div class="loss-card__head">
+          <span class="tag tag--red">Live example · Delhi → Mumbai</span>
+          <span class="loss-card__plane">Gulfstream G200</span>
+        </div>
+        <dl class="loss-rows">
+          <div><dt>Flight time</dt><dd>2h 05m</dd></div>
+          <div><dt>Fuel burned</dt><dd>620 kg</dd></div>
+          <div><dt>Crew cost</dt><dd>₹48,000</dd></div>
+          <div><dt>Handling + landing</dt><dd>₹1,10,000</dd></div>
+          <div class="loss-rows__total"><dt>Cost of flying empty</dt><dd>₹4,25,000</dd></div>
+          <div class="loss-rows__win"><dt>Recovered by 4 shared seats</dt><dd>+ ₹2,60,000</dd></div>
+        </dl>
+        <div class="meter" aria-hidden="true"><span style="width:61%"></span></div>
+        <p class="loss-card__foot">61% of that leg's cost, recovered instead of written off.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      <article class="stat reveal">
+        <p class="stat__num" data-count="38" data-suffix="%">0%</p>
+        <p class="stat__label">of private-jet legs in India are positioning legs with no passenger</p>
+      </article>
+      <article class="stat reveal">
+        <p class="stat__num" data-count="4200" data-prefix="₹" data-suffix=" Cr">0</p>
+        <p class="stat__label">India's private charter market, growing ~14% a year</p>
+      </article>
+      <article class="stat reveal">
+        <p class="stat__num" data-count="0" data-suffix="" data-text="Zero">0</p>
+        <p class="stat__label">consumer platforms that let a traveller book those seats</p>
+      </article>
+      <article class="stat reveal">
+        <p class="stat__num" data-count="80" data-suffix="%">0%</p>
+        <p class="stat__label">cheaper than a full charter when the seat is shared</p>
+      </article>
+    </div>
+    <p class="board__note">Directional industry estimates for this concept build, not audited
+      market data. The unit economics behind every number are in <code>BUSINESS-PLAN.md</code>.</p>
+  </div>
+</section>
+
+<!-- ===================== HOW ===================== -->
+<section class="section section--cream" id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow eyebrow--dark">The fix · three moving parts</p>
+      <h2 class="h2 h2--dark">One leg. Three winners.</h2>
+      <p class="lede lede--dark">
+        FLIGHT is a marketplace, not another charter broker. Operators list a leg they're
+        already flying. We price it, verify it, and fill the seats. Everybody gets paid from
+        a flight that was already in the air.
+      </p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Choose your side">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="pilot">I fly or operate</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="traveller">I want to travel</button>
+    </div>
+
+    <div class="steps" id="panel-pilot">
+      <article class="step reveal">
+        <span class="step__n">01</span>
+        <h3>List the leg in 40 seconds</h3>
+        <p>Enter departure, arrival and departure time from the app. Auto-filled from your ops sheet.
+          Upload permit + insurance once — every future leg inherits it.</p>
+        <ul class="ticks">
+          <li>Works for NLDS / charter operators</li>
+          <li>Single-file document vault</li>
+        </ul>
+      </article>
+      <article class="step reveal">
+        <span class="step__n">02</span>
+        <h3>We price and fill it</h3>
+        <p>Our pricing engine sets a per-seat fare that still beats a full charter by 60–80%.
+          It goes to verified travellers and corporate travel desks who match the route.</p>
+        <ul class="ticks">
+          <li>You approve the manifest before departure</li>
+          <li>No extra fuel, no extra sector</li>
+        </ul>
+      </article>
+      <article class="step reveal">
+        <span class="step__n">03</span>
+        <h3>Get paid per seat</h3>
+        <p>Passenger money is held in escrow and released after wheels-up. Operators keep
+          92% of every seat sold; crews earn a share of each filled leg.</p>
+        <ul class="ticks">
+          <li>Payout T+2 to your account</li>
+          <li>GST-ready invoices, auto-generated</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="steps" id="panel-traveller" hidden>
+      <article class="step">
+        <span class="step__n">01</span>
+        <h3>Pick a leg, not a price</h3>
+        <p>Browse only flights that are already scheduled. Delhi → Mumbai tomorrow at 4pm,
+          four seats, ₹34,000 each. No haggling with a broker at midnight.</p>
+        <ul class="ticks"><li>Real aircraft, real tail number</li><li>Transparent per-seat fare</li></ul>
+      </article>
+      <article class="step">
+        <span class="step__n">02</span>
+        <h3>Verify once, book in a tap</h3>
+        <p>KYC in 2 minutes. Pay through escrow. Your seat is confirmed only when the
+          operator accepts the manifest — usually inside 30 minutes.</p>
+        <ul class="ticks"><li>Automatic full refund if the leg changes</li><li>24/7 WhatsApp support</li></ul>
+      </article>
+      <article class="step">
+        <span class="step__n">03</span>
+        <h3>Fly private, pay sensible</h3>
+        <p>FBO lounge, no security queue, 12 minutes from car to cabin. Land and walk out.
+          Same aircraft as a ₹4-lakh charter — a fraction of the invoice.</p>
+        <ul class="ticks"><li>Save 60–80% vs full charter</li><li>Carbon per passenger drops sharply</li></ul>
+      </article>
+    </div>
+
+    <div class="split">
+      <figure class="split__media reveal">
+        <img src="assets/cabin.jpg" alt="Interior of a private jet cabin with cream leather seats and a walnut table" loading="lazy" />
+        <figcaption>The whole aircraft, not a middle seat. Shared cost, private experience.</figcaption>
+      </figure>
+      <div class="split__body reveal">
+        <p class="eyebrow eyebrow--dark">What makes this defensible</p>
+        <h3 class="h3 h3--dark">Supply nobody else can scrape</h3>
+        <p class="body body--dark">
+          Empty legs are not listed anywhere. They live in operator WhatsApp groups and
+          spreadsheets, priced ad hoc. Our edge is a supply-side workflow so light that
+          listing a leg costs less than ignoring it — plus a trust layer (permits, insurance,
+          escrow) that lets a stranger buy a seat with confidence.
+        </p>
+        <ul class="ticks ticks--dark">
+          <li><strong>Supply lock-in</strong> — the operator's document vault and manifest workflow</li>
+          <li><strong>Demand lock-in</strong> — saved routes and corporate travel desks</li>
+          <li><strong>Regulatory honesty</strong> — cost-share structures reviewed with aviation counsel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOARD ===================== -->
+<section class="section" id="board">
+  <div class="wrap">
+    <div class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow">Live inventory preview</p>
+        <h2 class="h2">The empty-leg board</h2>
+        <p class="lede">Flights already scheduled. Seats priced per person. This is synthetic
+          launch data — the real board opens with the waitlist.</p>
+      </div>
+      <div class="board__meta">
+        <span class="dot-live"></span> 8 legs · next 9 days
+      </div>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filter flights">
+      <button class="chip is-active" data-filter="all">All routes</button>
+      <button class="chip" data-filter="DEL">From Delhi</button>
+      <button class="chip" data-filter="BOM">From Mumbai</button>
+      <button class="chip" data-filter="BLR">From Bengaluru</button>
+      <button class="chip" data-filter="GOI">To Goa</button>
+    </div>
+
+    <div class="board" id="boardList" aria-live="polite">
+      <!-- rows injected by app.js -->
+    </div>
+
+    <p class="board__note">Sample inventory for preview. Fares exclude GST. Every seat is
+      subject to operator manifest approval and applicable charter regulations.</p>
+  </div>
+</section>
+
+<!-- ===================== EARNINGS ===================== -->
+<section class="section section--ink" id="earnings">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow eyebrow--light">The money math</p>
+      <h2 class="h2">What the leak is worth<br />to <span class="hl">you</span>.</h2>
+      <p class="lede">Move the sliders. This is a plain revenue model — no subscription
+        theatre, no affiliate links. One empty leg, filled.</p>
+    </div>
+
+    <div class="calc reveal">
+      <form class="calc__controls" id="calc" novalidate>
+        <div class="field">
+          <div class="field__top">
+            <label for="legs">Empty legs you fly per month</label>
+            <output id="legsOut" for="legs">12</output>
+          </div>
+          <input type="range" id="legs" name="legs" min="1" max="40" step="1" value="12" />
+          <div class="field__scale"><span>1</span><span>40</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field__top">
+            <label for="seats">Seats you fill per leg</label>
+            <output id="seatsOut" for="seats">5</output>
+          </div>
+          <input type="range" id="seats" name="seats" min="1" max="12" step="1" value="5" />
+          <div class="field__scale"><span>1</span><span>12</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field__top">
+            <label for="fare">Average fare per seat</label>
+            <output id="fareOut" for="fare">₹28,000</output>
+          </div>
+          <input type="range" id="fare" name="fare" min="8000" max="90000" step="1000" value="28000" />
+          <div class="field__scale"><span>₹8k</span><span>₹90k</span></div>
+        </div>
+
+        <div class="field">
+          <div class="field__top">
+            <label for="fill">Realistic fill rate</label>
+            <output id="fillOut" for="fill">55%</output>
+          </div>
+          <input type="range" id="fill" name="fill" min="10" max="100" step="5" value="55" />
+          <div class="field__scale"><span>10%</span><span>100%</span></div>
+        </div>
+
+        <p class="calc__hint">Deliberately conservative: not every seat sells, and some legs
+          go out half-full. Use your own numbers.</p>
+      </form>
+
+      <div class="calc__out" aria-live="polite">
+        <div class="calc__hero">
+          <p class="calc__hero-label">Extra revenue / month</p>
+          <p class="calc__hero-num" id="revMonth">₹8,50,080</p>
+          <p class="calc__hero-sub">on flights that were already leaving</p>
+        </div>
+        <dl class="calc__rows">
+          <div><dt>Seats sold</dt><dd id="seatsSold">33</dd></div>
+          <div><dt>Gross seat value</dt><dd id="gross">₹9,24,000</dd></div>
+          <div><dt>FLIGHT fee (8%)</dt><dd id="fee">− ₹73,920</dd></div>
+          <div class="calc__rows--strong"><dt>You keep, per month</dt><dd id="netMonth">₹8,50,080</dd></div>
+          <div><dt>Per year, at this run rate</dt><dd id="netYear">₹1,02,00,960</dd></div>
+        </dl>
+        <div class="calc__split">
+          <div><span class="mini">Operator keeps</span><strong>92%</strong></div>
+          <div><span class="mini">Crew bonus pool</span><strong>3%</strong></div>
+        </div>
+        <a class="btn btn--gold btn--full" href="#waitlist">Claim my first empty leg</a>
+        <p class="calc__fine">Illustrative model, not a guarantee. Actual revenue depends on
+          route demand, aircraft type and regulatory approval.</p>
+      </div>
+    </div>
+
+    <div class="earn-cards">
+      <article class="earn-card reveal">
+        <span class="tag tag--gold">For operators</span>
+        <h3>Recover the ferry leg</h3>
+        <p>Every positioning flight becomes inventory. Same pilot, same fuel, same permit —
+          the only new line is revenue.</p>
+        <p class="earn-card__num">₹2.6–6.4L<span> typical recovery per filled leg</span></p>
+      </article>
+      <article class="earn-card reveal">
+        <span class="tag tag--teal">For pilots &amp; crew</span>
+        <h3>Get paid for what you already fly</h3>
+        <p>3% of every filled leg goes to the crew bonus pool, split by the operator.
+          Log legs in the app; your share is tracked automatically.</p>
+        <p class="earn-card__num">₹18–42k<span> extra per pilot per month</span></p>
+      </article>
+      <article class="earn-card reveal">
+        <span class="tag tag--white">For travel partners</span>
+        <h3>A product your clients can't get elsewhere</h3>
+        <p>Corporate desks, wedding planners and luxury agencies resell seats with a
+          white-label link and 4% commission, paid on wheels-up.</p>
+        <p class="earn-card__num">4%<span> recurring commission per seat</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST / COMPLIANCE ===================== -->
+<section class="section section--cream" id="trust">
+  <div class="wrap">
+    <div class="grid grid--2 grid--mid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark">Built for a regulated sky</p>
+        <h2 class="h2 h2--dark">Trust is the product.</h2>
+        <p class="lede lede--dark">
+          Nobody puts a stranger in a private jet without paperwork. FLIGHT is designed so
+          compliance happens once, then rides along with every leg.
+        </p>
+        <a class="link-arrow link-arrow--dark" href="#waitlist">Talk to us about operating on FLIGHT <span>→</span></a>
+        <figure class="trust-photo">
+          <img src="assets/crew.jpg" alt="A pilot and first officer walking to a private jet on the apron at dusk" loading="lazy" />
+          <figcaption>The crew already flies the sector. The only thing missing is a passenger.</figcaption>
+        </figure>
+      </div>
+      <ul class="checks reveal">
+        <li>
+          <h3>Operator verification</h3>
+          <p>NSOP / charter permit, AOC, insurance and crew licensing checked before a single
+            leg is listed.</p>
+        </li>
+        <li>
+          <h3>Permit-first listing</h3>
+          <p>No leg goes live without a valid flight permit on file. Expired docs lock the listing.</p>
+        </li>
+        <li>
+          <h3>Escrowed money</h3>
+          <p>Traveller funds sit in a nodal account. Operators are paid after departure, or the
+            traveller is refunded automatically.</p>
+        </li>
+        <li>
+          <h3>Legal review, not legal theatre</h3>
+          <p>Seat-cost-share structures are being reviewed with Indian aviation counsel before
+            launch. We would rather launch late than launch wrong.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRICING ===================== -->
+<section class="section" id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">How FLIGHT makes money</p>
+      <h2 class="h2">Priced so listing is never the hard part.</h2>
+      <p class="lede">We only make money when a seat sells. That keeps our incentives aligned
+        with the operator — the same reason this business works.</p>
+    </div>
+    <div class="plans">
+      <article class="plan reveal">
+        <h3 class="plan__name">Starter</h3>
+        <p class="plan__price">₹0<span>/month</span></p>
+        <p class="plan__desc">For a pilot or small operator testing the water.</p>
+        <ul class="ticks ticks--sm">
+          <li>Up to 5 empty legs / month</li>
+          <li>8% success fee per seat sold</li>
+          <li>Escrow + GST invoicing</li>
+          <li>Basic route pricing</li>
+        </ul>
+        <a class="btn btn--line btn--full" href="#waitlist">Start free</a>
+      </article>
+
+      <article class="plan plan--featured reveal">
+        <span class="plan__badge">Most operators</span>
+        <h3 class="plan__name">Operator Pro</h3>
+        <p class="plan__price">₹4,999<span>/month</span></p>
+        <p class="plan__desc">For fleets that want every positioning leg working.</p>
+        <ul class="ticks ticks--sm">
+          <li>Unlimited legs + team seats</li>
+          <li>5% success fee (not 8%)</li>
+          <li>Priority placement on the board</li>
+          <li>Crew bonus-pool dashboard</li>
+          <li>White-label link for your clients</li>
+        </ul>
+        <a class="btn btn--gold btn--full" href="#waitlist">Get early access</a>
+      </article>
+
+      <article class="plan reveal">
+        <h3 class="plan__name">Partner desk</h3>
+        <p class="plan__price">4%<span> commission</span></p>
+        <p class="plan__desc">For travel agencies, corporate desks and event planners.</p>
+        <ul class="ticks ticks--sm">
+          <li>Resell seats under your brand</li>
+          <li>4% commission, paid on departure</li>
+          <li>Bulk holds for wedding / event travel</li>
+          <li>Dedicated WhatsApp desk</li>
+        </ul>
+        <a class="btn btn--line btn--full" href="#waitlist">Become a partner</a>
+      </article>
+    </div>
+    <p class="pricing__fine">Pricing is a launch hypothesis, shown for transparency. All figures
+      exclude GST.</p>
+  </div>
+</section>
+
+<!-- ===================== WAITLIST ===================== -->
+<section class="section section--cta" id="waitlist">
+  <div class="wrap wrap--narrow">
+    <div class="cta-card reveal">
+      <div class="cta-card__glow" aria-hidden="true"></div>
+      <p class="eyebrow eyebrow--light">Founding access · 500 seats</p>
+      <h2 class="h2">Be on the first empty leg.</h2>
+      <p class="lede">
+        Join as an operator, a pilot, or a traveller. Founding members lock the lower
+        success fee for 12 months and get first pick of every leg.
+      </p>
+
+      <form class="form" id="waitlistForm" novalidate>
+        <div class="form__row" role="group" aria-label="I am a">
+          <label class="radio"><input type="radio" name="role" value="Operator" checked /><span>Operator</span></label>
+          <label class="radio"><input type="radio" name="role" value="Pilot" /><span>Pilot / crew</span></label>
+          <label class="radio"><input type="radio" name="role" value="Traveller" /><span>Traveller</span></label>
+          <label class="radio"><input type="radio" name="role" value="Partner" /><span>Partner</span></label>
+        </div>
+        <div class="form__grid">
+          <div class="form__field">
+            <label for="wName">Name</label>
+            <input id="wName" name="name" type="text" autocomplete="name" placeholder="Aditya Sharma" required />
+          </div>
+          <div class="form__field">
+            <label for="wContact">Email or WhatsApp</label>
+            <input id="wContact" name="contact" type="text" autocomplete="email" placeholder="you@company.com" required />
+          </div>
+          <div class="form__field">
+            <label for="wBase">Base city</label>
+            <select id="wBase" name="base">
+              <option>Delhi NCR</option><option>Mumbai</option><option>Bengaluru</option>
+              <option>Hyderabad</option><option>Pune</option><option>Chennai</option>
+              <option>Ahmedabad</option><option>Kolkata</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="wLegs">Empty legs / month <span class="opt">optional</span></label>
+            <input id="wLegs" name="legs" type="number" min="0" max="500" placeholder="12" />
+          </div>
+        </div>
+        <label class="check">
+          <input type="checkbox" id="wConsent" required />
+          <span>I agree to be contacted about the FLIGHT launch. No spam, one email.</span>
+        </label>
+        <button class="btn btn--gold btn--lg btn--full" type="submit">Join the founding list</button>
+        <p class="form__error" id="formError" role="alert" hidden></p>
+        <p class="form__fine">Demo build: submissions are saved in this browser only, nothing is
+          sent to a server yet.</p>
+      </form>
+
+      <div class="form__success" id="waitlistSuccess" hidden>
+        <div class="tick-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>You're on the manifest.</h3>
+        <p id="successMsg">We'll email you before the first leg goes live.</p>
+        <button class="btn btn--line" type="button" id="addAnother">Add another person</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="wrap wrap--narrow">
+    <div class="sec-head sec-head--center">
+      <p class="eyebrow">Straight answers</p>
+      <h2 class="h2">The questions everyone asks</h2>
+    </div>
+    <div class="faq">
+      <details class="faq__item" open>
+        <summary>Is selling seats on a repositioning flight even legal in India?</summary>
+        <p>It depends on the structure, and we don't pretend otherwise. Commercial passenger
+          transport in India requires an NSOP/charter permit held by the operator; pure
+          seat resale on a charter is restricted. FLIGHT is being built around
+          operator-approved manifests and cost-share structures reviewed by Indian aviation
+          counsel before launch. If a structure can't be made compliant, we won't ship it.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Why would an operator give up 5–8% of a seat?</summary>
+        <p>Because the alternative is 0%. The leg is already paid for in fuel, crew and
+          handling. Any seat sold is margin that didn't exist an hour earlier, and FLIGHT
+          handles demand, KYC, payment and refunds.</p>
+      </details>
+      <details class="faq__item">
+        <summary>What happens if the flight gets rescheduled or cancelled?</summary>
+        <p>Empty legs move — that's the nature of the product. Travellers are re-accommodated
+          on another leg where possible, and otherwise refunded in full automatically from
+          escrow. Fares are priced with that risk built in.</p>
+      </details>
+      <details class="faq__item">
+        <summary>How is this different from a charter broker?</summary>
+        <p>A broker sells you a whole aircraft and keeps a margin. FLIGHT is a two-sided
+          marketplace: operators publish inventory themselves, and pricing is set by a model
+          rather than a phone call. We don't own aircraft and we don't mark up the charter.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Does this actually make money?</summary>
+        <p>At the calculator's defaults, one operator account generates about ₹73,900 a month
+          in platform fees (8% of ₹9.24 lakh in seats). Forty operator accounts at that run rate
+          is roughly ₹3.5 crore a year before ops costs. The full model, per-seat unit economics
+          and first-100-customers plan are in <code>BUSINESS-PLAN.md</code> in this repo.</p>
+      </details>
+      <details class="faq__item">
+        <summary>What about safety and security?</summary>
+        <p>Every seat is on an aircraft flown by a licensed crew under an approved operator,
+          with manifests filed and KYC completed before boarding. FLIGHT adds the paperwork
+          layer; it never replaces the operator's legal responsibility for the flight.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a class="brand" href="#top">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M3 21.5 29 8.5 21.5 25l-7.4-3.2L11 27l-1.4-6.6L3 21.5Z" fill="currentColor"/>
+          </svg>
+          <span class="brand__word">FLIGHT<span class="brand__dot">.</span></span>
+        </a>
+        <p>Turning empty legs into seats, and seats into revenue.<br />Built in India, for the sky we already pay for.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Product</h4>
+        <a href="#board">Empty-leg board</a>
+        <a href="#earnings">Earnings calculator</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="#problem">The problem</a>
+        <a href="#trust">Trust &amp; compliance</a>
+        <a href="#waitlist">Founding access</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Launch status</h4>
+        <p class="footer__status"><span class="dot-live"></span> Pre-launch · 2026</p>
+        <p class="footer__small">Concept build. Not a charter operator. No flights are
+          currently sold through this site.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 FLIGHT. All rights reserved.</p>
+      <p>Made for the empty leg that didn't have to be empty.</p>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- ===================== MODAL ===================== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__x" data-close aria-label="Close">×</button>
+    <p class="eyebrow" id="modalRoute">DEL → BOM</p>
+    <h3 id="modalTitle">Hold a seat</h3>
+    <p class="modal__sub" id="modalSub"></p>
+    <form class="form form--tight" id="seatForm" novalidate>
+      <div class="form__field">
+        <label for="sName">Name</label>
+        <input id="sName" type="text" placeholder="Your name" required />
+      </div>
+      <div class="form__field">
+        <label for="sContact">WhatsApp or email</label>
+        <input id="sContact" type="text" placeholder="+91 …" required />
+      </div>
+      <div class="form__field">
+        <label for="sSeats">Seats</label>
+        <select id="sSeats"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
+      </div>
+      <button class="btn btn--gold btn--full" type="submit">Request this seat</button>
+      <p class="form__error" id="seatError" role="alert" hidden></p>
+      <p class="form__fine">Preview only. A request is not a booking — the operator must accept
+        the manifest.</p>
+    </form>
+    <div class="form__success" id="seatSuccess" hidden>
+      <div class="tick-badge"><svg viewBox="0 0 24 24"><path d="m4 12.5 5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Request noted.</h3>
+      <p id="seatSuccessMsg"></p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
