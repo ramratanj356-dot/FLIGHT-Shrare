@@ -47,8 +47,28 @@ Or just double-click `index.html`.
 
 ## Deploy
 
-Any static host works. For GitHub Pages: **Settings → Pages → Source: Deploy from a branch →
-`main` / root**. The site needs no build step.
+Any static host works — the site needs no build step, no server, no environment variables.
+
+**Windows / drag-and-drop (fastest, no account):** open <https://app.netlify.com/drop> and drop
+`dist/flight-standalone.html`. You get a public URL in about 10 seconds.
+
+**GitHub Pages (permanent, on your own domain path):**
+1. **Settings → Pages → Source: Deploy from a branch → `main` / `(root)` → Save**
+2. Live at `https://ramratanj356-dot.github.io/FLIGHT-Shrare/`
+
+`.github/workflows/deploy-pages.yml` then re-deploys on every push to `main`. It skips cleanly
+(with a warning, not a red build) while Pages is still disabled.
+
+**`dist/flight-standalone.html`** is a single self-contained file — CSS, JS and all three images
+inlined as data URIs (~790 KB). It works opened straight from disk, emailed as an attachment, or
+hosted anywhere. Rebuild it after editing the source:
+
+```bash
+python3 tools/build-standalone.py
+```
+
+> Note: a token without the **Pages: write** permission cannot *create* the Pages site via API,
+> which is why enabling Pages is a one-time manual step.
 
 ## Honest limitations
 
