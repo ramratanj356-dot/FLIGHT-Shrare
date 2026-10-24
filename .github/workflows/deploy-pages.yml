@@ -1,5 +1,13 @@
 name: Deploy to GitHub Pages
 
+# SETUP (one time): enable Pages first.
+#   Repo → Settings → Pages → Source: "Deploy from a branch" → main / (root) → Save
+# After that, this workflow re-deploys the site on every push to main.
+#
+# Why the guard: a token without the "Pages" permission cannot CREATE the Pages
+# site, so this workflow deliberately does not try to. It only deploys to an
+# already-enabled site, and fails fast with a clear message if it isn't set up.
+
 on:
   push:
     branches: [main]
@@ -24,16 +32,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Enable Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
+      - name: Check Pages is enabled
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh api "repos/${{ github.repository }}/pages" >/dev/null 2>&1; then
+            echo "::warning::GitHub Pages is not enabled for this repository."
+            echo "Enable it once in Settings → Pages → Deploy from a branch → main / (root)."
+            echo "Skipping deploy (this is a setup step, not a build failure)."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
 
       - name: Stage site
         run: |
           mkdir -p _site
           rsync -a --exclude '.git' --exclude '.github' --exclude 'node_modules' \
-                    --exclude '_site' --exclude '*.zip' --exclude '*.log' \
+                    --exclude '_site' --exclude 'dist' --exclude '*.zip' --exclude '*.log' \
                     ./ _site/
           touch _site/.nojekyll
           ls -la _site
